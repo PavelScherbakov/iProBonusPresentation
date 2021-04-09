@@ -47,12 +47,12 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
-    testImplementation 'junit:junit:4.+'
+    testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     //Библиотека iProBonusRepository
-    implementation "com.github.PavelScherbakov:iProBonusRepository:v0.1-alpha"
+    implementation "com.github.PavelScherbakov:iProBonusRepository:v0.3-alpha"
 
 
     // Android KTX
@@ -75,12 +75,37 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$version_lifecycle_extensions"
 
 
-    implementation 'androidx.fragment:fragment-ktx:1.1.0'
-
     // Swipe refresh layout
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01"
 
     // ThreeTen Android Backport https://github.com/JakeWharton/ThreeTenABP
     // support for java 8 datetime api for old API levels
     implementation "com.jakewharton.threetenabp:threetenabp:1.2.1"
+}
+
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                // Applies the component for the release build variant.
+                from components.release
+
+                // You can then customize attributes of the publication as shown below.
+                groupId = 'com.github.PavelScherbakov'
+                artifactId = 'iProBonusPresentation-release'
+                version = '1.0'
+            }
+            // Creates a Maven publication called “debug”.
+            debug(MavenPublication) {
+                // Applies the component for the debug build variant.
+                from components.debug
+
+                groupId = 'com.github.PavelScherbakov'
+                artifactId = 'iProBonusPresentation-debug'
+                version = '1.0'
+            }
+        }
+    }
 }
