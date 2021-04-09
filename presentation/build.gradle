@@ -52,7 +52,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     //Библиотека iProBonusRepository
-    implementation "com.github.PavelScherbakov:iProBonusRepository:v0.3-alpha"
+    implementation "com.github.PavelScherbakov.iProBonusRepository:iProBonusRepository-debug:v0.3-alpha"
 
 
     // Android KTX
