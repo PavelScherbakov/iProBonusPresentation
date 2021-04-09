@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">iProBonusPresentation</string>
+    <string name="common_api_exception_text">Отсутствует соединение интернет или сервис временно недоступен</string>
+    <string name="bonus_date_template">%1$s сгорит</string>
+    <string name="bonus_value_template">%1$.0f бонусов</string>
+
+    <string name="error_title">Ошибка</string>
+    <string name="button_ok">Ок</string>
+    <string name="cancel_button">Отменить</string>
+</resources>

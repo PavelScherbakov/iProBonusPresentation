@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorOnPrimary">#FF000000</color>
+    <color name="colorPrimary">#F54B55</color>
+    <color name="colorPrimaryVariant">#D2333E</color>
+
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--Цвет для текста-->
+    <color name="primaryTextColor">@color/black</color>
+    <color name="secondaryTextColor">#979797</color>
+
+    <!--Цвета для фона фрагмента с Бонусами-->
+    <color name="bonus_background_color1">#D2333E</color>
+    <color name="bonus_background_color2">#F54B55</color>
+
+    <!--Цвет для иконки Информация-->
+    <color name="bonus_ic_info_color1">#D2333E</color>
+    <color name="bonus_ic_info_color2">#F54B55</color>
+
+    <!--Цвет для иконки Детализация-->
+    <color name="bonus_ic_details">#D4343F</color>
+
+    <!--Цвет для иконки Огонь-->
+    <color name="bonus_ic_burn_color1">#FFFFB258</color>
+    <color name="bonus_ic_burn_color2">#FFC71515</color>
+</resources>
