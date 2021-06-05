@@ -12,6 +12,8 @@ import ru.pscher.android.iprobonusrepository.network.result.BasicResult
 import ru.pscher.android.iprobonusrepository.network.result.DataInfoByAvailableBonusesResult
 import timber.log.Timber
 import androidx.lifecycle.Observer
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import ru.pscher.android.iprobonuspresentation.ui.dialog.ConfirmDialogFragment
 import java.util.*
 
@@ -33,7 +35,10 @@ suspend fun <T: BasicResult> handlingRequestError(
 
     requestInProgress?.value = true
     try {
-        val result = requestCall()
+        val result = withContext(Dispatchers.IO) {
+            Timber.e("requestCall()")
+            requestCall()
+        }
 
         when(result.resultOperation.status.value) {
             in treatErrorsAsSuccess -> {
